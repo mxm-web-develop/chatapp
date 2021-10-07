@@ -1,0 +1,20 @@
+export default [
+    {
+        userId:'sdfjlsdfi3l22fd2o',
+        avator:'sldfjklsdf.png',
+        userName:'张小一',
+        userIntro:'天下第一'
+    },
+    {
+        userId:'sdfjlsdfi3l22fd2o',
+        avator:'sldfjklsdf.png',
+        userName:'张小二',
+        userIntro:'天下第二'
+    },
+    {
+        userId:'sdfjlsdfi3l22fd2o',
+        avator:'sldfjklsdf.png',
+        userName:'张小三',
+        userIntro:'天下第三'
+    },   
+]
