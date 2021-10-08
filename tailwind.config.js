@@ -64,7 +64,8 @@ module.exports = {
       80: '20rem',
       96: '24rem',
       'chat-w':'765px',
-      'chat-h':'525px'
+      'chat-h':'525px',
+      'display-h':"calc(525px - 125px)"
     },
     animation: {
       none: 'none',

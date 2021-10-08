@@ -1,16 +1,21 @@
-import UserItem from "./UserItem"
+import UserItem, { User } from "./UserItem"
+import Header from "./Header"
+import { useContext, useEffect } from "react"
+import { ActionType, AppContext, AppState } from "../../store"
 
 const Fnbar = ()=>{
+    
+    const [state,dispatch] = useContext<[state:AppState,dispatch:any]>(AppContext)
+    useEffect(()=>{
+
+    },[state.activedChat])
+
     return(
         <div>
-            <div className='flex px-2 py-2 items-center'>
-                <div className='left'></div>
-                <div className='center text-xs opacity-30 flex-grow'>好友列表</div>
-                <div className='right cursor-pointer'>
-                    +
-                </div>
-            </div>
-            <UserItem avator='sdfsdf' userId='sdfsdf' userName='zhang' userIntro='asldfjldksfj'></UserItem>
+            <Header></Header>
+            {
+                state&&state.userList&&state.userList.map((i: User)=> <UserItem userData={i} key={i.userId}  isActived={state.activedChat === i.userId?true:false}></UserItem>)
+            }
         </div>
     )
 

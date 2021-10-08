@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import Layout from './Layout'
+import AppFrame from './layouts/AppFrame'
 import Fnbar from './components/Fnbar'
 import Workbar from './components/Workbar'
-import UseChat from './useChat'
+import { AppProvider } from './store'
 function App() {
-  const { haha} = UseChat()
-  console.log(haha);
-  
   return (
-    <Layout 
-      leftBar={<Fnbar></Fnbar>}
-      rightBar={<Workbar></Workbar>}
-    >
-    </Layout>
+    <AppProvider>
+      <AppFrame 
+        leftBar={<Fnbar></Fnbar>}
+        rightBar={<Workbar></Workbar>}
+      >
+      </AppFrame>
+    </AppProvider>
   )
 }
 

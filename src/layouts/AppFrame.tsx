@@ -7,13 +7,13 @@ interface IProps {
 }
 
 
-const Layout = (props:IProps)=>{
+const AppFrame = (props:IProps)=>{
     return(
-        <div className='flex w-chat-w h-chat-h bg-white'>
+        <div className='flex w-chat-w h-chat-h bg-white shadow-md'>
             <div className='left w-44 border-r'>
                 {props.leftBar}
             </div>
-            <div className='right'>
+            <div className='right flex-grow'>
                 {props.rightBar}
             </div>
         </div>
@@ -21,4 +21,4 @@ const Layout = (props:IProps)=>{
 
 }
 
-export default Layout
+export default AppFrame
