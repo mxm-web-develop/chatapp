@@ -14,6 +14,7 @@ const ChatDisplay = (props:IProps)=>{
     }
     const displayer = useRef(null)
     useEffect(()=>{
+
         props.getDisplayer(displayer)
     },[props.chatStream])
     return(

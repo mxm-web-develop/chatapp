@@ -1,19 +1,19 @@
 export default [
     {
         userId:'sdfjsd1l241511342',
-        avator:'sldfjklsdf.png',
+        avator:'/photo.png',
         userName:'张小一',
         userIntro:'天下第一'
     },
     {
         userId:'sdfjl42144211o',
-        avator:'sldfjklsdf.png',
+        avator:'/photo.png',
         userName:'张小二',
         userIntro:'天下第二'
     },
     {
         userId:'sdfjl531ddf541z3',
-        avator:'sldfjklsdf.png',
+        avator:'/photo.png',
         userName:'张小三',
         userIntro:'天下第三'
     },   

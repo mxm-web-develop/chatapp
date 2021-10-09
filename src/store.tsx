@@ -1,4 +1,5 @@
 import {createContext, ReactElement,Reducer,useEffect,useReducer, useState} from 'react'
+import {remove as _remove} from 'lodash'
 import { User } from './components/Fnbar/UserItem'
 import chat from './mokeData/chat'
 import users from './mokeData/users'
@@ -23,7 +24,8 @@ export type AppState = {
 export enum ActionType{
     CHANGE_ACTIVED,
     ADD_FIREND,
-    SUBMIT_MSG
+    SUBMIT_MSG,
+    DELETE_MSG
 }
 
 
@@ -51,6 +53,18 @@ const reducer = (state:AppState,action:Action):any=>{
             return {
                 ...state
             }
+        case ActionType.DELETE_MSG:
+            const arr = _remove(state.chatStream,(i)=>{
+                console.log(i,i.id, action.payload);
+                
+                return i.id === action.payload
+            })
+            console.log({...state},arr,'zheli');
+            
+            return{
+                ...state,
+            }
+            
 
         default:
             return {

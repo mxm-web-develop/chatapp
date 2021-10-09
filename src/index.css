@@ -5,3 +5,17 @@
 body{
   background-color: gray;
 }
+
+.ant-modal-root{
+  width:765px ;
+  height: 525px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.ant-modal-wrap,
+.ant-modal-mask{
+  width:inherit;
+  height:inherit;
+  overflow:hidden;
+}

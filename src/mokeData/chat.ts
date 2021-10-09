@@ -4,7 +4,7 @@ export default [
         to:'admintestuser',
         id:'sdkfjsdlf5125adslfiei2i2',
         date:'1633693542538',
-        type:'text',
+        type:'text/plain',
         content:'这里是一条聊天内容'
     },
     {   
@@ -12,7 +12,7 @@ export default [
         from:'admintestuser',
         id:'sdkfjs114512dlfadslfiei2i2',
         date:'1633693541538',
-        type:'text',
+        type:'text/plain',
         content:'这里是一回复消息'
     },
     {   
@@ -20,7 +20,7 @@ export default [
         to:'admintestuser',
         id:'sdkfjsdlfasdfsdfdslfiei2i2',
         date:'1633693562538',
-        type:'text',
+        type:'text/plain',
         content:'这里凉快点手机费；来圣诞节佛is的飞机哦 '
     },
     {   
@@ -28,7 +28,7 @@ export default [
         to:'admintestuser',
         id:'sdkfjsdlsdfsdffadslfiei2i2',
         date:'1633693582538',
-        type:'text',
+        type:'text/plain',
         content:'这里是demo一回复消息'
     },
     {   
@@ -36,7 +36,7 @@ export default [
         to:'admintestuser',
         id:'sdkfjs151dlfadslfiei2i2',
         date:'1633693512538',
-        type:'text',
+        type:'text/plain',
         content:'这里是demo一回复消息sdf'
     },
     {   
@@ -44,7 +44,7 @@ export default [
         from:'admintestuser',
         id:'sdkfjs5125dlfadslfiei2i2',
         date:'1633693532538',
-        type:'text',
+        type:'text/plain',
         content:'这里是demo一回复消息这里是demo一回复消息这里是demo一回复消息'
     },
     {   
@@ -52,7 +52,7 @@ export default [
         from:'admintestuser',
         id:'sdkfjsdl15125fadslfiei2i2',
         date:'1633693571538',
-        type:'text',
+        type:'text/plain',
         content:'这里是demo一回复消息这里是demo一回复消息这里是demo一回复消息'
     },
 ]

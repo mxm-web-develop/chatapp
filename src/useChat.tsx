@@ -9,6 +9,10 @@ interface ChatStreamItem {
     date:Date
 }
 type ChatStream = [string,ChatStreamItem[]]
+export enum MSG_TYPE{
+    TEXT = 'text/plain',
+    IMG ='image/*'
+}
 
 const UseChat = ()=>{
     const [userList,setUserlist] = useState<User[]>(users)
@@ -45,10 +49,32 @@ const UseChat = ()=>{
         
     }
 
+    async function removeMsg(params:any){
+        await setTimeout(() => dispatch({type:ActionType.DELETE_MSG,payload:params.id}),800)
+            getFriendMsg(params.to)
+        return true
+    }
+
+    function renderMsg(msg:any,msgType:string=MSG_TYPE.TEXT){
+        let imgUrl;
+        if(msgType === MSG_TYPE.IMG){
+             imgUrl = URL.createObjectURL(msg)
+        } 
+        switch(msgType){
+            case MSG_TYPE.TEXT :
+                return  <div className=' text-sm opacity-80 my-2'>{msg}</div>
+            case MSG_TYPE.IMG:
+                return  <img src={imgUrl} className='w-full'></img>
+        }
+    }
+
+
     return{
         getFriendMsg,
         getUserById,
-        renderTime
+        renderTime,
+        renderMsg,
+        removeMsg
     }
 }
 

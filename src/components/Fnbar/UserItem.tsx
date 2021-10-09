@@ -1,4 +1,4 @@
-import { ReactElement, useCallback, useContext, useEffect, useState } from "react"
+import { ReactElement, useContext } from "react"
 import { ActionType, AppContext, AppState } from "../../store"
 
 export interface User{
@@ -25,10 +25,10 @@ const UserItem = (props:IProps)=>{
 
     return(
         <div className={props.isActived ?'flex w-full py-3 px-2 items-center border-t border-b cursor-pointer text-white bg-gray-600':'flex w-full py-3 px-2 items-center border-t border-b cursor-pointer'} onClick={()=>handleItemClick(props.userData)}> 
-            <div className='avator w-12'>
+            <div className='avator w-10 rounded-lg'>
                 <img src={props.userData.avator}/>
             </div>
-            <div className='user text-sm'>
+            <div className='user  px-2 text-xs'>
                 {props.isActived}
                 <div>{props.userData.userName}</div>
                <div className=' text-xs opacity-30'>{props.userData.userIntro}</div> 
