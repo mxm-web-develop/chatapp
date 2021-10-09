@@ -5,6 +5,9 @@ module.exports = {
     './src/**/*.html',
     './src/**/*.vue',
     './src/**/*.jsx',
+    './src/**/*.tsx',
+    './src/**/*.ts',
+    './src/**/*.js',
   ],
   presets: [],
   darkMode: false, // or 'media' or 'class'
