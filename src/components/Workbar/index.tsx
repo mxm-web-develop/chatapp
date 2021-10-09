@@ -3,7 +3,7 @@ import { ActionType, AppContext, AppState, ChatStreamItem } from "../../store"
 import ChatBoxFrame from "../../layouts/ChatBoxFrame"
 import ChatDisplay from './ChatDisplay'
 import ChatToolbar from './ChatToolbar'
-import UseChat from "../../useChat"
+import UseChat, { MSG_TYPE } from "../../useChat"
 import { loginUser } from "../../mokeData/loginUser"
 
 
@@ -15,10 +15,10 @@ const WorkBar = ()=>{
     useEffect(()=>{
        const data = getFriendMsg(state.activedChat)
        setMsgList(data)
-    },[state.activedChat,state.chatStream])
+    },[state])
 
 
-    const handleSubmit = (content:string| undefined)=>{
+    const handleSubmit = (content:any| undefined,type:MSG_TYPE)=>{
         const time = new Date().getTime()
         if(content){
             dispatch({type:ActionType.SUBMIT_MSG,payload:{   
@@ -26,7 +26,7 @@ const WorkBar = ()=>{
                 to:state.activedChat,
                 id:'mxmchat_'+time,
                 date:time,
-                type:'text',
+                type:type,
                 content:content
                 }
             })
@@ -47,7 +47,7 @@ const WorkBar = ()=>{
             {
                 !state.activedChat?
                 <div className="opacity-30 flex justify-center items-center h-full w-full bg-gray-700">MxM Chat App</div> :
-                <ChatBoxFrame topBar={<ChatDisplay chatStream={msgList} getDisplayer={handleDisplayer} />} toolsBar={<ChatToolbar textOnsubmit={handleSubmit} />}/>
+                <ChatBoxFrame topBar={<ChatDisplay chatStream={msgList} getDisplayer={handleDisplayer} />} toolsBar={<ChatToolbar msgOnsubmit={handleSubmit} />}/>
             }
         </div>
     )
